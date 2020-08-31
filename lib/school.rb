@@ -8,9 +8,7 @@ class School
     @roster
   end
   def add_student(name, grade)
-    :roster => {
-      :grade => [name]
-    }
-end
+    @roster[grade] ||= []
+    @roster[grade] << name
 end
 
