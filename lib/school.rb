@@ -11,4 +11,5 @@ class School
     @roster[grade] ||= []
     @roster[grade] << name
 end
+end
 
