@@ -1,5 +1,6 @@
 class School
-  attr_accessor :name, :roster
+  attr_reader :name
+  attr_accessor :roster
   def initialize(name)
     @name = name 
     @roster = []
@@ -8,11 +9,7 @@ class School
     @roster
   end
   def add_student(name, grade)
-    if @roster.keys.include?(grade)
-      @roster[grade] << name 
-      @roster[grade]
-    else
-      @roster[grade] = [name]
+    @roster[grade] ||= [] 
+    @roster[grade] << name 
   end
-end
 end
