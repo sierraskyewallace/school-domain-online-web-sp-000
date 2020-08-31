@@ -16,3 +16,4 @@ class School
   end
   
 end
+school.add_student("Skye Wallace", 9)
